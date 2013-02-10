@@ -99,6 +99,11 @@ module Amazon
       self.send_request(opts)
     end
 
+    def self.item_search_per_options(opts = {})
+      opts[:operation] = 'ItemSearch'
+      self.send_request(opts)
+    end
+
     # Search an item by ASIN no.
     def self.item_lookup(item_id, opts = {})
       opts[:operation] = 'ItemLookup'
